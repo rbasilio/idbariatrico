@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Carteira para Bariátrico</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script> <!-- FULL JQUERY WITH AJAX!!! -->
+
+    <script> // ONSEN NAV
+        window.fn = {};
+        window.fn.open = function() {
+          var menu = document.getElementById('menu');
+          menu.open();
+        };
+
+        window.fn.load = function(page) {
+          var content = document.getElementById('content');
+          var menu = document.getElementById('menu');
+          content.load(page)
+            .then(menu.close.bind(menu));
+        };
+    </script>
+
+    <script>
+        document.addEventListener('prechange', function(event) {
+          document.querySelector('ons-toolbar .center')
+            .innerHTML = event.tabItem.getAttribute('label');
+        });
+    </script>
+
+    <style>
+        .centerimg {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          border-radius: 8px;
+          border: solid 1px #c0c0c0;
+        }
+
+        #mypage .page__background {
+          background-image: url('img/file.jpg');
+        }
+    </style>
+  </head>
+  <body onload="">
+
+    <template id="home.html">
+      <ons-page id="splash">
+        Logo
+      </ons-page>
+    </template>
+
+    <ons-page>
+      <ons-toolbar>
+        <div class="center">Carteira para bariátrico</div>
+      </ons-toolbar>
+
+      <ons-tabbar swipeable position="auto">
+        <ons-tab page="tab1.html" label="Paciente" icon="md-face" active active-icon="md-face">
+        </ons-tab>
+        <ons-tab page="tab2.html" label="Médico Responsável" icon="md-face" active-icon="md-face">
+        </ons-tab>
+      </ons-tabbar>
+    </ons-page>
+
+    <template id="tab1.html">
+      <ons-page id="Tab1" class="page__background">
+        <ons-card>
+          <img src="imgs/fotobr.png" alt="Paciente" style="width: 70%" class="centerimg">
+          <div class="title">
+            <center>Marta Soares da Rocha</center>
+          </div>
+          <div class="content">
+            <ons-list>
+              <ons-list-item>Operada em 20.FEV.2019</ons-list-item>
+              <ons-list-item>Deve evitar Lactose</ons-list-item>
+              <ons-list-item>Deve evitar Glútem</ons-list-item>
+              <ons-list-item>Residente em Ipanema, RJ</ons-list-item>
+            </ons-list>
+          </div>
+        </ons-card>
+      </ons-page>
+    </template>
+
+    <template id="tab2.html" class="page__background">
+      <ons-page id="Tab2">
+        <ons-card>
+          <img src="imgs/fotomd.png" alt="Médico" style="width: 70%;" class="centerimg">
+          <div class="title">
+            <center>Dr. Elton Damasceno</center>
+          </div>
+          <div class="content">
+            <ons-list>
+              <ons-list-item>Cirurgião</ons-list-item>
+              <ons-list-item>Gastroenterologista</ons-list-item>
+              <ons-list-item>Hospital Barra D'Or</ons-list-item>
+              <ons-list-item>(21) 98221-3455</ons-list-item>
+            </ons-list>
+          </div>
+        </ons-card>
+      </ons-page>
+    </template>
+
+
+  </body>
+</html>
