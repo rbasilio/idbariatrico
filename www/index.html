@@ -65,10 +65,10 @@
       </ons-toolbar>
 
       <ons-tabbar swipeable position="auto">
-        <ons-tab page="tab1.html" label="Paciente" icon="md-face" active active-icon="md-face">
-        </ons-tab>
-        <ons-tab page="tab2.html" label="Médico Responsável" icon="md-face" active-icon="md-face">
-        </ons-tab>
+        <ons-tab page="tab1.html" label="Paciente" icon="md-face" active active-icon="md-face"></ons-tab>
+        <ons-tab page="tab2.html" label="Cirurgião" icon="md-face" active-icon="md-face"></ons-tab>
+        <ons-tab page="tab3.html" label="Psicólogo" icon="md-face" active-icon="md-face"></ons-tab>
+        <ons-tab page="tab4.html" label="Nutricionista" icon="md-face" active-icon="md-face"></ons-tab>
       </ons-tabbar>
     </ons-page>
 
@@ -83,8 +83,8 @@
             <ons-list>
               <ons-list-item>Operada em 20.FEV.2019</ons-list-item>
               <ons-list-item>Deve evitar Lactose</ons-list-item>
-              <ons-list-item>Deve evitar Glútem</ons-list-item>
-              <ons-list-item>Residente em Ipanema, RJ</ons-list-item>
+              <ons-list-item>Sangue tipo O-</ons-list-item>
+              <ons-list-item>Alergia à sulfa</ons-list-item>
             </ons-list>
           </div>
         </ons-card>
@@ -101,9 +101,42 @@
           <div class="content">
             <ons-list>
               <ons-list-item>Cirurgião</ons-list-item>
-              <ons-list-item>Gastroenterologista</ons-list-item>
+              <ons-list-item>CRM 124437</ons-list-item>
               <ons-list-item>Hospital Barra D'Or</ons-list-item>
               <ons-list-item>(21) 98221-3455</ons-list-item>
+            </ons-list>
+          </div>
+        </ons-card>
+      </ons-page>
+    </template>
+    <template id="tab3.html" class="page__background">
+      <ons-page id="Tab3">
+        <ons-card>
+          <img src="imgs/fotops.png" alt="Médico" style="width: 70%;" class="centerimg">
+          <div class="title">
+            <center>Cíntia Zveltman</center>
+          </div>
+          <div class="content">
+            <ons-list>
+              <ons-list-item>Psicólogo</ons-list-item>
+              <ons-list-item>CRP 05-12345</ons-list-item>
+              <ons-list-item>(21) 985621-3455</ons-list-item>
+            </ons-list>
+          </div>
+        </ons-card>
+      </ons-page>
+    </template>
+    <template id="tab4.html" class="page__background">
+      <ons-page id="Tab4">
+        <ons-card>
+          <img src="imgs/fotonu.png" alt="Médico" style="width: 70%;" class="centerimg">
+          <div class="title">
+            <center>Boris Sveiter</center>
+          </div>
+          <div class="content">
+            <ons-list>
+              <ons-list-item>Nutricionista</ons-list-item>
+              <ons-list-item>(21) 94321-3455</ons-list-item>
             </ons-list>
           </div>
         </ons-card>
